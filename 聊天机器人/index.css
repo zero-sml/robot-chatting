@@ -1,0 +1,119 @@
+*{
+  margin:0;
+  padding:0;
+}
+::-webkit-scrollbar{
+  width:0
+}
+html,body{
+  height: 100%;
+}
+.clearfix::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+.wrapper{
+  position: relative;
+  width: 600px;
+  height: 100%;
+  margin:0 auto;
+}
+.header{
+  height: 40px;
+  width: 100%;
+  color:#fff;
+  line-height:40px;
+  text-align:center;
+  background-color: gray;
+  font-weight:700
+}
+.content{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height:calc( 100% - 90px);
+  background-image: url(./img/YI.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer{
+  position: absolute;
+  bottom:0;
+  padding:10px;
+  width:calc(100% - 20px);
+  background-color: #ddd;
+}
+
+.content .aviator{
+  display:inline-block;
+  width:30px;
+  height:30px;
+  vertical-align: top;
+}
+.content .text{
+  line-height:30px;
+  max-width:280px;
+  display:inline-block;
+  border-radius:5px;
+  padding:0 10px;
+  margin:0 10px;
+}
+.content .mine{
+  /* float:right; */
+  width:100%;
+  margin:5px 0;
+  position: relative;
+}
+.content .mine .text::after{
+  content:"";
+  width:0;
+  height: 0;
+  border:5px solid transparent;
+  border-left-color:greenyellow;
+  position: absolute;
+  right:30px;
+  top:10px;
+}
+
+.content .YiBo{
+  /* float:left; */
+  width:100%;
+  position: relative;
+}
+.content .YiBo .text{
+  background-color: rgb(252, 250, 250);
+}
+.content .YiBo .text::after{
+  content:"";
+  width:0;
+  height: 0;
+  border:5px solid transparent;
+  border-right-color:rgb(252, 250, 250);
+  position: absolute;
+  left:35px;
+  top:10px;
+}
+.content .mine .aviator{
+  float:right;
+}
+.content .mine .text{
+  float:right;
+  background-color: greenyellow;
+}
+.footer .send-text {
+  width:calc(100% - 100px);
+  height:30px;
+  padding:0 10px;
+  border:none;
+  outline:none;
+  float:left;
+}
+.footer .send-btn{
+  width:80px;
+  height:30px;
+  float:right;
+  border:none;
+}
+.footer .send-btn:hover{
+  cursor:pointer;
+}
